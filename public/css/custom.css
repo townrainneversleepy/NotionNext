@@ -12,7 +12,7 @@ html,
 body {
   min-height: 100%;
   background-color: #10131c;
-  background-image: url("/images/backend1.png");
+  background-image: url("/images/background1.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
