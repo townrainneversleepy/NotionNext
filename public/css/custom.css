@@ -33,7 +33,7 @@ body::before {
     ),
     url("/images/background1.png") center / cover no-repeat;
 
-  filter: blur(2px);
+  filter: blur(1.2px);
   transform: none;
 }
 
