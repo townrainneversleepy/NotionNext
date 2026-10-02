@@ -6,3 +6,26 @@
 .fa-info:before {
     content: "\f05a";
 }
+
+html,
+body {
+  background: url('/images/background.jpg') center center / cover fixed no-repeat !important;
+}
+
+/* 页面整体底色透明 */
+body {
+  background-color: transparent !important;
+}
+
+/* 内容卡片半透明 */
+article,
+.bg-white,
+.dark\:bg-hexo-black-gray {
+  background-color: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(8px);
+}
+
+.dark article,
+.dark .bg-white {
+  background-color: rgba(20, 20, 20, 0.78) !important;
+}
