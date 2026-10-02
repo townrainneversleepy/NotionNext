@@ -1,26 +1,49 @@
-/* 静态文件导入 自定义样式*/
+/* 静态文件导入 自定义样式 */
 
-#theme-fukasawa .sideLeft hr{
-    opacity: .04;
+#theme-fukasawa .sideLeft hr {
+  opacity: 0.04;
 }
+
 .fa-info:before {
-    content: "\f05a";
+  content: "\f05a";
 }
 
-/* Hexo 全站背景图 */
-html,
+/* 全站背景底色 */
+html {
+  background: #10131c;
+}
+
 body {
   min-height: 100%;
-  background-color: #10131c;
-  background-image: url("/images/background1.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: transparent !important;
 }
 
-/* 让 Hexo 内容区域透出全站背景 */
-#theme-hexo,
+/* 背景图：半透明深色遮罩 + 轻微模糊 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -24px;
+  z-index: 0;
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      rgba(16, 19, 28, 0.72),
+      rgba(16, 19, 28, 0.72)
+    ),
+    url("/images/background1.png") center / cover no-repeat;
+
+  filter: blur(10px);
+  transform: scale(1.06);
+}
+
+/* 让 Hexo 页面内容显示在背景图上方 */
+#theme-hexo {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+}
+
 #theme-hexo #wrapper {
   background: transparent !important;
 }
