@@ -28,8 +28,8 @@ body::before {
 
   background:
     linear-gradient(
-      rgba(16, 19, 28, 0.4),
-      rgba(16, 19, 28, 0.4)
+      rgba(16, 19, 28, 0.2),
+      rgba(16, 19, 28, 0.2)
     ),
     url("/images/background1.png") center / cover no-repeat;
 
